@@ -1,0 +1,9 @@
+project: savantenvs/tinyexif
+target: fuzz_exif
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_exif/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_exif
+    libfuzzer: true
+    timeout: 5
